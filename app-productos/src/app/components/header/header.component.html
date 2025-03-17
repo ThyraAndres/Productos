@@ -1,0 +1,34 @@
+<header>
+  <div class="overlay">
+    <h1>
+      <span>{{ tituloHeader }}</span>
+    </h1>
+    <h3>
+      <span>{{ subtituloHeader }}</span>
+    </h3>
+    <p>
+      <span>{{ mensajeHeader }}</span>
+    </p>
+    <nav class="header-links">
+      <div class="link-container">
+        <a>
+          <i class="fa fa-home"></i>
+          <span>Inicio</span>
+        </a>
+      </div>
+    </nav>
+    <br /><br />
+    <div *ngIf="mostrar">
+      <p>{{ mensajePropiedad }}</p>
+    </div>
+    <div *ngIf="!mostrar">
+      <p>{{ mensajePropiedad }}</p>
+    </div>
+    <div class="link-container">
+      <button (click)="cambiarValor()" class="btn btn-outline-secondary">
+        <i class="fa fa-exchange" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+    
+</header>

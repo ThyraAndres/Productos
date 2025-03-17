@@ -1,0 +1,91 @@
+/* app.component.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.container {
+  padding: 10px;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.first-style {
+  background: #63458A;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+}
+
+ul li {
+  margin: 0 15px;
+}
+
+ul li a {
+  color: #B288C0;
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #7E5A9B;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: .2s;
+}
+
+ul li a:before {
+  background: #E4B7E5;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: .2s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.third-style {
+  background-color: #110F10;
+}
+
+.third-style ul li a {
+  color: #ffffff;
+  background: #f2d6fa;
+  box-shadow: inset 0 0 1px #FAD8D6;
+}
+
+.third-style ul li a:before {
+  background: #FAD8D6;
+}
+
+.third-style ul li a:hover:before {
+  box-shadow: 0 0 15px #FAD8D6;
+}
+
+.footer {
+  background-color: #110F10;
+  text-align: center;
+  padding: 10px 0;
+}

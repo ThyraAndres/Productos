@@ -1,0 +1,71 @@
+<div class="producto-form">
+  <h2>{{ isEditMode ? 'Editar Producto' : 'Agregar Nuevo Producto' }}</h2>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <!-- Campo Nombre -->
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        [(ngModel)]="producto.nombre"
+        required
+      />
+    </div>
+
+    <!-- Campo Descripción -->
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        name="descripcion"
+        [(ngModel)]="producto.descripcion"
+        required
+      />
+    </div>
+
+    <!-- Campo Precio -->
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input
+        type="number"
+        class="form-control"
+        id="precio"
+        name="precio"
+        [(ngModel)]="producto.precio"
+        required
+        min="0"
+      />
+    </div>
+
+    <!-- Campo Fecha de Creación -->
+    <div class="form-group">
+      <label for="fechaCreacion">Fecha de Creación</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fechaCreacion"
+        name="fechaCreacion"
+        [(ngModel)]="producto.fechaCreacion"
+        required
+      />
+    </div>
+
+    <!-- Campo Estado -->
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <select class="form-control" id="estado" name="estado" [(ngModel)]="producto.estado">
+        <option [value]="true">Activo</option>
+        <option [value]="false">Inactivo</option>
+      </select>
+    </div>
+
+    <!-- Botón para enviar -->
+    <button type="submit" class="btn btn-primary">
+      {{ isEditMode ? 'Actualizar Producto' : 'Crear Producto' }}
+    </button>
+  </form>
+</div>

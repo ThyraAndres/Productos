@@ -1,0 +1,213 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #fff; /* Fondo claro para contraste */
+  color: #333;
+  text-align: center;
+  border-radius: 0 0 85% 85% / 30%;
+
+}
+
+.main-content h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.main-content .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.main-content .card h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.main-content .card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.main-content .card:hover{
+  background: #ffffff; /* Color de fondo al pasar el mouse */
+  box-shadow: inset 0 0 15px #E4B7E5; /* Sombra interna al pasar el mouse */
+}
+.content {
+  flex: 1;
+}
+
+.container {
+  padding: 10px;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.first-style {
+  background: #63458A;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+}
+
+ul li {
+  margin: 0 15px;
+}
+
+ul li a {
+  color: #B288C0;
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #7E5A9B;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: .2s;
+}
+
+ul li a:before {
+  background: #E4B7E5;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: .2s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.third-style {
+  background-color: #110F10;
+}
+
+.third-style ul li a {
+  color: #ffffff;
+  background: #f2d6fa;
+  box-shadow: inset 0 0 1px #FAD8D6;
+}
+
+.third-style ul li a:before {
+  background: #FAD8D6;
+}
+
+.third-style ul li a:hover:before {
+  box-shadow: 0 0 15px #FAD8D6;
+}
+
+.footer {
+  background-color: #110F10;
+  text-align: center;
+  padding: 10px 0;
+}
+
+button, .btn {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #333;
+  background: #fff;
+  margin-bottom: 20px; /* Reducir el margen inferior */
+  box-shadow: 0 3px 20px 0 #0000003b;
+  display: inline-block; /* Asegura que los enlaces y botones se comporten de manera similar */
+  text-align: center; /* Centra el texto dentro de los botones */
+}
+
+button:hover:before, .btn:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #E4B7E5;
+}
+
+button:hover, .btn:hover {
+  color: #63458A;
+  background: #E4B7E5;
+  box-shadow: inset 0 0 1px #E4B7E5;
+}
+
+.link-container .btn {
+  padding: 10px 20px; /* Tamaño consistente para todos los botones */
+  margin: 0 5px; /* Espacio adicional alrededor de cada botón */
+}
+
+.link-container .btn-red {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
+
+.link-container .btn-red:hover {
+  background-color: darkred; /* Color más oscuro al pasar el cursor */
+  border-color: darkred;
+}
+
+.link-container .btn-blue {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+
+.link-container .btn-blue:hover {
+  background-color: rgb(0, 0, 112); /* Color más oscuro al pasar el cursor */
+  border-color: rgb(0, 0, 112);
+}
+
+.link-container .btn-violet {
+  background-color: blueviolet;
+  color: white;
+  border-color: blueviolet;
+}
+
+.link-container .btn-violet:hover {
+  background-color: rgb(138, 43, 226); /* Color más oscuro al pasar el cursor */
+  border-color: rgb(138, 43, 226);
+}
+.link-container .btn-green {
+background-color: green;
+color: white;
+border-color: green;
+}
+
+.link-container .btn-green:hover {
+background-color: darkgreen; /* Color más oscuro al pasar el cursor */
+border-color: darkgreen;
+}

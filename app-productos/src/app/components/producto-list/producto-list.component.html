@@ -1,0 +1,43 @@
+<div class="producto-list">
+  <div class="acciones">
+    <button (click)="crearProducto()">Agregar Producto</button>
+  </div>
+
+  <!-- Botones dentro de la tabla o lista de productos -->
+  <div *ngFor="let producto of productos">
+    <p>{{ producto.nombre }}</p>
+    <button (click)="editarProducto(producto.id)">Editar</button>
+    <button (click)="eliminarProducto(producto.id)">Eliminar</button>
+  </div>
+
+  <h2>Lista de Productos</h2>
+
+  <!-- Tabla de productos -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Fecha de Creación</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>${{ producto.precio }}</td>
+        <td>{{ producto.fechaCreacion }}</td>
+        <td>{{ producto.estado ? "Activo" : "Inactivo" }}</td>
+        <td>
+          <button (click)="editarProducto(producto.id)">Editar</button>
+          <button (click)="eliminarProducto(producto.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,46 @@
+<div class="imagen-form">
+  <h2>Agregar Nueva Imagen</h2>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <!-- Campo Producto ID -->
+    <div class="form-group">
+      <label for="productoId">ID del Producto</label>
+      <input
+        type="number"
+        class="form-control"
+        id="productoId"
+        name="productoId"
+        [(ngModel)]="imagen.productoId"
+        required
+      />
+    </div>
+
+    <!-- Campo URL -->
+    <div class="form-group">
+      <label for="url">URL de la Imagen</label>
+      <input
+        type="url"
+        class="form-control"
+        id="url"
+        name="url"
+        [(ngModel)]="imagen.url"
+        required
+      />
+    </div>
+
+    <!-- Campo Descripción -->
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        name="descripcion"
+        [(ngModel)]="imagen.descripcion"
+        required
+      />
+    </div>
+
+    <!-- Botón para enviar -->
+    <button type="submit" class="btn btn-primary">Agregar Imagen</button>
+  </form>
+</div>
